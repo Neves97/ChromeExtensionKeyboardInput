@@ -1,0 +1,16 @@
+{
+  "name": "Keyboard input Example",
+  "description": "Detects a pressed key",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting","tabs"],
+  "host_permissions":["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], 
+      "js": ["key_event.js"]  
+    }]
+}
